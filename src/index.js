@@ -4,6 +4,9 @@ const database = require("./config/db")
 const cookie_parser = require("cookie-parser");
 const bodyParser = require("body-parser");
 
+app.get("/", (req, res) => {
+  res.send("welcome to priyanka backend server");
+});
 app.use(express.json());
 app.use(cookie_parser())
 app.use(bodyParser.urlencoded({ extended: true }))
